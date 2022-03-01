@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/conversas.css">
+    <link rel="stylesheet" href="css/status.css">
+    <link rel="stylesheet" href="css/chamadas.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <title>ChatApp</title>
+</head>
+<body>
+    <header class="cabecalho-principal">
+        <h1 class="titulo-principal">ChatApp</h1>
+        <div class="botao-pesquisar">
+            <span class="cabecalho-principal-icone material-icons">search</span>
+        </div>
+        <div class="botao-opcoes">
+            <span class="cabecalho-principal-icone material-icons">more_vert</span>
+        </div>
+    </header>
+    <nav class="navegacao-principal">
+        <a class="botao-nav botao-camera" id="botao-camera">
+            <span class="navegacao-principal-icone material-icons">photo_camera</span>
+        </a>
+        <a class="botao-nav botao-conversas selecionado nao-lida" id="botao-conversas">
+            <h2>Conversas</h2>
+            <div class="numero-de-nao-lidas-container">
+                <p class="numero-de-nao-lidas">3</p>
+            </div>
+        </a>
+        <a class="botao-nav botao-status" id="botao-status">
+            <h2>Status</h2>
+        </a>
+        <a class="botao-nav botao-chamadas" id="botao-chamadas">
+            <h2>Chamadas</h2>
+        </a>
+    </nav>
+    <main class="conteudo-principal slider">
+        <section class="secao-conversas slide" id="conversas">
+            <ul class="lista-de-conversas">
+                <li class="caixa-conversa conversas-arquivadas">
+                    <div class="conversas-arquivadas-icone-container"><span class="material-icons-outlined">archive</span></div>
+                    <h3 class="botao-arquivadas">Arquivadas</h2>
+                    <p class="numero-de-arquivadas">15</p>
+                </li>
+                <li class="caixa-conversa nao-lida">
+                    <img src="imgs/foto.png" alt="" class="foto-contato">
+                    <div class="nome-e-mensagem">
+                        <h3 class="nome-contato">Luis Carlos</h3>
+                        <p class="detalhes-ultima-mensagem">Hahahah</p>
+                    </div>
+                    <div class="informacoes">
+                        <p class="hora-ou-data">17:09</p>
+                        <div class="numero-de-nao-lidas-container">
+                            <p class="numero-de-nao-lidas">10</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="caixa-conversa nao-lida">
+                    <img src="imgs/foto.png" alt="" class="foto-contato">
+                    <div class="nome-e-mensagem">
+                        <h3 class="nome-contato">Marta Pereira</h3>
+                        <p class="detalhes-ultima-mensagem">sim</p>
+                    </div>
+                    <div class="informacoes">
+                        <p class="hora-ou-data">11:24</p>
+                        <div class="numero-de-nao-lidas-container">
+                            <p class="numero-de-nao-lidas">3</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="caixa-conversa">
+                    <img src="imgs/foto.png" alt="" class="foto-contato">
+                    <div class="nome-e-mensagem">
+                        <h3 class="nome-contato">Joaquim Faria</h3>
+                        <p class="detalhes-ultima-mensagem"><span class="mensagem-visualizada-icone material-icons">
+                            done_all
+                            </span>Ok. Muito obrigado!</p>
+                    </div>
+                    <div class="informacoes">
+                        <p class="hora-ou-data">Ontem</p>
+                        <div class="numero-de-nao-lidas-container">
+                            <p class="numero-de-nao-lidas">0</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="caixa-conversa nao-lida">
+                    <img src="imgs/foto.png" alt="" class="foto-contato">
+                    <div class="nome-e-mensagem">
+                        <h3 class="nome-contato">Maria de Lima</h3>
+                        <p class="detalhes-ultima-mensagem">boa noite.</p>
+                    </div>
+                    <div class="informacoes">
+                        <p class="hora-ou-data">22/02/2022</p>
+                        <div class="numero-de-nao-lidas-container">
+                            <p class="numero-de-nao-lidas">2</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="nova-conversa"><span class="material-icons-round">chat</span></div>
+        </section>
+        <section class="secao-status slide" id="status">
+            <div class="caixa-status">
+                <img src="imgs/foto.png" alt="" class="foto-perfil">
+                <span class="adicionar-status-icone material-icons">add</span>
+                <div class="nome-e-mensagem">
+                    <h3 class="meu-status-titulo">Meu status</h3>
+                    <p class="meu-status-subtitulo">Toque para atualizar seu status</p>
+                </div>
+                <div class="informacoes">
+                </div>
+            </div>
+            <div class="atualizacoes-recentes">
+                <h4 class="status-titulo">Atualizações recentes</h4>
+            </div>
+            <div class="atualizacoes-vistas">
+                <h4 class="status-titulo">Atualizações vistas</h4>
+            </div>
+        </section>
+        <section class="secao-chamadas slide" id="chamadas">
+            <ul class="registro-de-chamadas">
+                <li class="caixa-chamada nao-lida">
+                    <img src="imgs/foto.png" alt="" class="foto-contato">
+                    <div class="nome-e-mensagem">
+                        <h3 class="nome-contato">Marília Freitas</h3>
+                        <p class="informacoes-chamada"><span class="icone-chamada chamada-recebida chamada-nao-atendida material-icons">call_received</span><time datetime="2022-02-24 08:52">24 de fevereiro 08:52</time></p>
+                    </div>
+                    <div class="informacoes">
+                        <span class="chamar-icone material-icons">call</span>
+                    </div>
+                </li>
+                <li class="caixa-chamada nao-lida">
+                    <img src="imgs/foto.png" alt="" class="foto-contato">
+                    <div class="nome-e-mensagem">
+                        <h3 class="nome-contato">Bento Santiago</h3>
+                        <p class="informacoes-chamada"><span class="icone-chamada chamada-feita chamada-nao-atendida material-icons">call_made</span><span class="numero-de-chamadas">(2)</span><time datetime="2022-02-22 13:38">22 de fevereiro 13:38</time></p>
+                    </div>
+                    <div class="informacoes">
+                        <span class="chamar-icone material-icons">call</span>
+                    </div>
+                </li>
+                <li class="caixa-chamada nao-lida">
+                    <img src="imgs/foto.png"" class="foto-contato">
+                    <div class="nome-e-mensagem">
+                        <h3 class="nome-contato">Samael da Silva</h3>
+                        <p class="informacoes-chamada"><span class="icone-chamada chamada-feita chamada-atendida material-icons">call_made</span><time datetime="2022-02-10 00:24">10 de fevereiro 00:24</time></p>
+                    </div>
+                    <div class="informacoes">
+                        <span class="chamar-icone material-icons">call</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

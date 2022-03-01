@@ -1,0 +1,314 @@
+@import url("colors.css");
+
+
+
+    body {
+        background-color: var(--cor-de-fundo);
+        font-family: 'Roboto', 'Arial', sans-serif;
+    }
+
+
+    .cabecalho-principal {
+        background-color: var(--cor-de-fundo-cabecalho);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.75rem;
+        padding-top: 1.3rem;
+        padding-bottom: 1.2rem;
+        z-index: 99999;
+    }
+
+    .titulo-principal {
+        color: var(--cor-secundaria);
+        font-weight: 600;
+        font-size: 1.2rem;
+        flex-grow: 1;
+    }
+
+    .cabecalho-principal-icone {
+        color: var(--cor-secundaria);
+    }
+
+    .navegacao-principal {
+        position: sticky;
+        top: 0;
+        background-color: var(--cor-de-fundo-cabecalho);
+        color: var(--cor-secundaria);
+        display: flex;
+        justify-content: center;
+        text-transform: uppercase;
+        align-items: stretch;
+        height: 2rem;
+        font-size: .9rem;
+        font-weight: 600;
+        padding-top: 1rem;
+        padding-bottom: 0;
+        box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
+        margin-bottom: .3rem;
+        z-index: 99999;
+    }
+    
+    .botao-nav {
+        text-align: center;
+        width: calc(100% - 2rem);
+        color: inherit;
+        text-decoration: none;
+        display: flex;
+        gap: .45rem;
+        justify-content: center;
+
+    }
+
+
+    .botao-camera {
+        width: 8rem;
+        height: inherit;
+        transform: translateY(-.175rem);
+    }
+
+    .botao-camera .navegacao-principal-icone {
+        font-size: 1.5rem;
+    }
+    
+    .conteudo-principal {
+        height: 100vh;
+
+    }
+    .selecionado {
+        color: var(--cor-destaque);
+        border-bottom: .175rem solid var(--cor-destaque);
+        border-style: inset;
+    }
+
+    .secao-conversas, .secao-status, .secao-chamadas {
+        display: flex;
+        flex-direction: column;
+        align-self: stretch;
+        height: auto;
+    }
+
+
+    .caixa-conversa, .caixa-status, .caixa-chamada {
+        display: flex;
+        justify-content: space-around;
+        padding: .9rem 1rem .8rem 1rem;
+        align-items: flex-start;
+        color: var(--cor-secundaria);
+    }
+
+    .conversas-arquivadas {
+        padding-top: 1rem;
+        height: auto;
+    }
+    
+    .conversas-arquivadas-icone-container {
+        display: flex;
+        justify-content: center;
+        width: 3rem;
+    }
+    
+    .conversas-arquivadas-icone-container span {
+        color: var(--cor-secundaria);
+        font-size: 1.3rem;
+    }
+
+
+    .botao-arquivadas {
+        color: var(--cor-titulo);
+        font-size: 1.05rem;
+        font-weight: 600;
+        padding-left: .95rem;
+
+    }
+
+    .numero-de-arquivadas {
+        color: var(--cor-destaque);
+        font-size: .75rem;
+        flex-grow: 1;
+        width: 1%;
+        text-align: end;
+    }
+    
+
+    .nome-e-mensagem {
+        width: 70%;
+        padding-left: 1rem;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        height: 2.5rem;
+        justify-content: space-between;
+    }
+
+    .nome-contato, .meu-status-titulo {
+        color: var(--cor-titulo);
+        font-size: 1.05rem;
+        font-weight: 600;
+        
+    }
+
+    .informacoes {
+        width: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        flex-grow: 1;
+    }
+
+    .informacoes .hora-ou-data {
+        font-size: .8rem;
+        font-weight: 550;
+        padding-top: .47rem;
+        margin-bottom: .3rem;
+    }
+
+    .nao-lida .hora-ou-data {
+        color: var(--cor-destaque);
+    }
+
+    .numero-de-nao-lidas {
+        display: none;
+    }
+
+    .nao-lida .numero-de-nao-lidas-container {
+        height: 1.2rem;
+        padding: 0 .4rem;
+        border-radius: 1.2rem;
+        display: initial;
+        background-color: var(--cor-destaque);
+    }
+
+    .nao-lida .numero-de-nao-lidas {
+        display: initial;
+        color: var(--cor-de-fundo);
+        font-size: .7rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .nao-lida .numero-de-nao-lidas span {
+        top: 1rem;
+    }
+
+    .foto-contato, .foto-perfil {
+        border-radius: 50%;
+        width: 3rem;
+        
+    }
+
+    .slider {
+        width: 100%;
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        align-items: stretch;
+        
+    }
+
+    .slider::-webkit-scrollbar {
+        display: none;
+      }
+      
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .slider {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
+
+    .slide {
+        width: 100%;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+    }
+
+    .chamar-icone {
+        color: var(--cor-destaque);
+        padding-top: 1.2rem;
+    }
+
+    .informacoes-chamada {
+        display: flex;
+        align-items: flex-end;
+        gap: .5rem;
+    }
+
+    .informacoes-chamada .chamada-nao-atendida {
+        color: var(--cor-missed);
+        font-size: 1.2rem;
+    }
+
+     .informacoes-chamada .chamada-atendida {
+        color: var(--cor-taken);
+        font-size: 1.2rem;
+    }
+
+    .caixa-status {
+        position: relative;
+    }
+
+    .adicionar-status-icone {
+        position: absolute;
+        left: 2.55rem;
+        top: 2.5rem;
+        background-color: var(--cor-destaque);
+        color: white;
+        border: .2rem solid var(--cor-de-fundo);
+        border-radius: 50%;
+    }
+
+    .caixa-status span {
+        font-size: 1.25rem;
+    }
+
+    .mensagem-visualizada-icone {
+        color: var(--cor-confirmada);
+    }
+
+    .nome-e-mensagem span {
+        font-size: 1rem;
+    }
+
+    .detalhes-ultima-mensagem, .meu-status-subtitulo {
+        display: flex;
+        align-items: flex-end;
+        gap: .3rem;
+    }
+
+    .botao-nav .numero-de-nao-lidas-container {
+        transform: translateY(-.2rem);
+        font-size: 1.2rem;
+        background-color: var(--cor-secundaria);
+    }
+
+    .selecionado .numero-de-nao-lidas-container {
+        background-color: var(--cor-destaque);
+    }
+
+    .botao-nav .numero-de-nao-lidas-container p {
+        display: flex;
+        transform: translateY(.25rem);
+    }
+
+    .status-titulo {
+        padding-left: 1rem;
+        color: var(--cor-secundaria);
+        font-size: .9rem;
+        margin: .75rem 0;
+    }
+
+    .nova-conversa {
+        position: fixed;
+        bottom: 1.2rem;
+        right: 1.2rem;
+        height: 3.4rem;
+        width: 3.4rem;
+        background-color: var(--cor-destaque);
+        display: flex;
+        border-radius: 50%;
+        color: white;
+        justify-content: center;
+        align-items: center;
+    }
